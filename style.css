@@ -11,6 +11,9 @@
     font-weight: 500;
     font-style: normal;
   }
+  a{
+    text-decoration: none;
+  }
 
 .theme-lines{
     border: none;
@@ -201,4 +204,10 @@
 .toppick-card-img{
     height: 150px;
     width: 150px;
+}
+/* form error messages for sign up */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
