@@ -7,6 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script defer src="./loginScript.js"></script>
 
     <!-- google fonts begins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,16 +21,27 @@
         <div class="row">
             <div class="login-form col-4 card border-success my-4 p-4">
                 <h2>Welcome Back</h2>
-                <form action="">
-                    <label for="email" class="card-title ">Email Address*</label><br>
-                    <input type="email" name="" id=""><br><br>
-                    <label for="password" class="card-title">Password*</label><br>
-                    <input type="password" name="" id=""><br><br>
+                <form id="logForm" action="/">
+
+                    <div class="input-control">
+                        <label for="email" class="card-title ">Email Address*</label>
+                        <input type="text" id="email" name="email" placeholder="Enter your email" width="100%"><br>
+                        <div class="error"></div>
+                    </div>
+                   <br><br>
+
+                   <div class="input-control">
+                    <label for="password" class="card-title ">Enter Password</label>
+                    <input type="password" id="password" name="password" placeholder="********" width="100%"><br>
+                    <div class="error"></div>
+                </div>   
+
+                   
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="remember" id="" />
                         <label class="form-check-label" for=""> Remember me on this computer </label>
                     </div><br>
-                    <button class="roboto-thin btn btn-success">SIGN IN</button>  &emsp;
+                    <button class="roboto-thin btn btn-success" type="submit">SIGN IN</button>  &emsp;
                     <a href="">Forgot your password</a><hr><br>
                     <h5>OR</h5>
                     <span>Don't have an account yet?</span><br>
