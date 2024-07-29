@@ -7,7 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
+    <script defer src="./script.js"></script>
     <!-- google fonts begins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,77 +23,46 @@
             <div class="login-form col-4 card border-success my-4 p-4">
                 <h2>Join our Community</h2>
                 <h6>Sign up to start enjoing Library services today.</h6><br>
-                <form action="" onsubmit="return validateInput()">
-
-                    <label for="email" class="card-title ">Email Address*</label><br>
-                    <input 
-                        type="text"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        width="100%">
-                    <br>
-                    <span
-                        id="emailerror"
-                        class="error-message"></span>
-                     <br>
-
-                    <label for="firstname" class="card-title ">First Name*</label><br>
-                    <input 
-                        type="text"
-                        id="fname"
-                        name="fname"
-                        placeholder="John">
-
-                    <span
-                        id="fname-error"
-                        class="error-message">
-                    </span>
-                    <br><br>
-
-                    <label for="lastname" class="card-title ">Last Name*</label><br>
-                    <input 
-                        type="text"
-                        id="lname"
-                        name="lname"
-                        placeholder="Smith">
-                    
-                    <span
-                        id="lname-error"
-                        class="error-message">
-                    </span><br><br>
-
-                    <label for="password" class="card-title">Choose Your Password*</label><br>
-                    <input type="password"
-                        id="password"
-                        name="Password"
-                        placeholder="********">
-                    <span
-                        id="password-error"
-                        class="error-message"
-                    ></span>
-                    <br><br>
-
-                    <ul>
-                        <li>One lowercase character</li>
-                        <li>One number</li>
-                        <li>One uppercase character</li>
-                        <li>8 charracters minimum</li>
-                    </ul>
-
-                    <label for="password" class="card-title">Enter Password Again*</label><br>
-                    <input type="password" name="" placeholder="*******"><br><br>
-
-                    <label for="phonenumber">Phone Number*</label><br>
-                    +91<input type="tel" name="phonenumber"  style="float: right; width: 85%; margin-right: 15px;"><br><br>
-
-                    <br><label for="nationality">Nationality</label><br>
-                    <select class="form-select" aria-label="Default select example" name="nationality">
-                        <option value="1">India</option>
-                    </select><br>
-
-                    <label for="gender">Gender</label><br>
-                    <select class="form-select" aria-label="Default select example" name="gender">
+                    <form id="signupForm" action="/">
+                        <div class="input-control">
+                            <label for="email" class="card-title ">Email Address*</label>
+                            <input type="text" id="email" name="email" placeholder="Enter your email" width="100%"><br>
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="fname" class="card-title ">First Name*</label>
+                            <input type="text" id="fname" name="fname" placeholder="John" width="100%"><br>
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="lname" class="card-title ">Last Name*</label>
+                            <input type="text" id="lname" name="lname" placeholder="Smith" width="100%"><br>
+                            <div class="error"></div>
+                        </div>    
+                        <div class="input-control">
+                            <label for="password" class="card-title ">Choose Your Password*</label>
+                            <input type="password" id="password" name="password" placeholder="********" width="100%"><br>
+                            <div class="error"></div>
+                            <ul>
+                                <li>One lowercase character</li>
+                                <li>One number</li>
+                                <li>One uppercase character</li>
+                                <li>8 charracters minimum</li>
+                            </ul>
+                        </div>
+                        <div class="input-control">
+                            <label for="password2" class="card-title ">Enter Password Again*</label>
+                            <input type="password" id="password2" name="password2" placeholder="********" width="100%"><br>
+                            <div class="error"></div>
+                        </div>                   
+                        <div class="input-control">
+                            <label for="phonenumber" class="card-title ">Phone Number*</label>
+                            +91<input type="tel" id="phonenumber" name="phonenumber" style="float: right; width: 100%; margin-right: 15px;"><br>
+                            <div class="error"></div>
+                        </div>
+                                            
+                    <label for="gender">Gender</label>
+                    <select class="form-select" aria-label="Default select example" width="100%"name="gender">
                         <option value="1">Male</option>
                         <option value="1">Female</option>
 
@@ -141,7 +110,6 @@
 </footer>
 <!-- Footer ends  -->    
 
-<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
